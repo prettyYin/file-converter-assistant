@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write  # 允许创建 Release 和上传附件
 
+# 让 actions 使用 Node.js 24，消除 Node 20 弃用告警
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build-and-release:
     runs-on: windows-latest
